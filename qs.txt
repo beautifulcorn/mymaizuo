@@ -1,0 +1,2 @@
+1、如何区分什么使用export.default和module.export
+2、view是用来搭架子吗？

@@ -1,6 +1,14 @@
 <template>
   <div>
-    <h2>我是电影模块</h2>
-    <router-view></router-view>
+    <filmsTab></filmsTab>
   </div>
 </template>
+
+<script>
+import filmsTab from "@/components/films/filmsTab";
+export default {
+  components: {
+    filmsTab,
+  },
+};
+</script>

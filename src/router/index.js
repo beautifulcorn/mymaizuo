@@ -6,6 +6,11 @@ import cinemas from "@/router/cinemas";
 
 Vue.use(VueRouter);
 
+const originPush = VueRouter.prototype.push;
+VueRouter.prototype.push = function(location) {
+  return originPush.call(this, location).catch((err) => err);
+};
+
 const routes = [center, cinemas, films, { path: "/", redirect: "/films" }];
 
 const router = new VueRouter({
